@@ -1,9 +1,9 @@
-const Paslauga = require('../models/creatPaslaugos');
+// const Paslauga = require('../models/creatPaslaugos');
 
-async function getAllPaslaugos() {
-  const response = await Paslauga.find({});
+// async function getAllPaslaugos() {
+//   const response = await Paslauga.find({});
 
-  return response;
-}
+//   return response;
+// }
 
-module.exports = getAllPaslaugos;
+// module.exports = getAllPaslaugos;
