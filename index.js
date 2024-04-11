@@ -5,7 +5,7 @@ const port = 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Express on Vercel');
+  res.send('labas ka tu');
 });
 
 app.listen(port, () => {
