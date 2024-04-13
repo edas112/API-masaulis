@@ -1,15 +1,17 @@
 const { Router } = require('express');
 
-const { getAllPaslaugos } = require('../controllers');
+const { postPaslauga } = require('../controllers');
 
 const router = Router();
 
-router.get('/paslaugos', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const data = await getAllPaslaugos(req.body);
-    res.json(data);
+    const data = await postPaslauga(req.body);
+    res.status(201).json(data);
   } catch (error) {
     console.log('error', error.message);
     res.status(400).json({ error: error.message });
   }
 });
+
+module.exports = router;

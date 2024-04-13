@@ -1,3 +1,4 @@
-// module.exports = {
-//   getAllPaslaugos: require('./getAllPaslaugos'),
-// };
+module.exports = {
+  getAllPaslaugos: require('./getAllPaslaugos'),
+  postPaslauga: require('./postPaslauga'),
+};
