@@ -16,7 +16,7 @@ app.use('/paslaugos', paslaugaSetterRouter);
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_DB_URI);
-    await console.log('Database conect');
+    console.log('Database conect');
   } catch (err) {
     console.log('Error', err.message);
   }
