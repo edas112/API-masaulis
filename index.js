@@ -2,12 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 require('dotenv').config();
+const cors = require('cors');
 const port = 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
   res.send('Express on Vercel');
 });
+
+app.use(cors());
 
 const paslaugaGetterRouter = require('./routes/paslaugaGetter.routes');
 
