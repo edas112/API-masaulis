@@ -6,8 +6,12 @@ const port = 3000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('vercel');
+  res.send('Express on Vercel');
 });
+
+const paslaugaGetterRouter = require('./routes/paslaugaGetter.routes');
+
+app.use('/paslaugos', paslaugaGetterRouter);
 
 const paslaugaSetterRouter = require('./routes/paslaugaSetter.routes');
 

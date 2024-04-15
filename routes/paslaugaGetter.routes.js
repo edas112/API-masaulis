@@ -4,7 +4,7 @@ const { getAllPaslaugos } = require('../controllers');
 
 const router = Router();
 
-router.get('/paslaugos', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const data = await getAllPaslaugos(req.body);
     res.json(data);
@@ -13,3 +13,5 @@ router.get('/paslaugos', async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
+
+module.exports = router;
