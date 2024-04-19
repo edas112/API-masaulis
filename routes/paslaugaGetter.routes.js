@@ -6,7 +6,7 @@ const router = Router();
 
 router.get('/', async (req, res) => {
   try {
-    const data = await getAllPaslaugos(req.body);
+    const data = await getAllPaslaugos();
     res.json(data);
   } catch (error) {
     console.log('error', error.message);
