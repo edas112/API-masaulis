@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const footerSchema = new mongoose.Schema({
-  title: { type: String, required: true, unique: true },
-  number: { type: Number, required: true },
+  title: { type: String, required: true },
+  number: { type: String, required: true },
   email: { type: String, required: true },
   adres: { type: String, required: true },
 });
