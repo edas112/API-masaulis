@@ -13,8 +13,8 @@ const port = 3000;
 app.use(express.json());
 app.use(cors());
 
-app.use('/paslaugos', paslaugaGetterRouter);
-app.use('/paslaugos', paslaugaSetterRouter);
+app.use('/kortele', paslaugaGetterRouter);
+app.use('/kortele', paslaugaSetterRouter);
 app.use('/user', require('./routes/user.routes'));
 app.use('/footer', footerSetterRouter);
 app.use('/footer', footerGetterRouter);
