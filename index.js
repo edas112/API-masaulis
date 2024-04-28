@@ -18,10 +18,7 @@ app.use('/paslaugos', paslaugaSetterRouter);
 app.use('/user', require('./routes/user.routes'));
 app.use('/footer', footerSetterRouter);
 app.use('/footer', footerGetterRouter);
-
-app.get('/', (req, res) => {
-  res.send('Express on Vercel');
-});
+app.get('/', (req, res) => res.send('Express on Vercel'));
 
 const connectDB = async () => {
   try {
