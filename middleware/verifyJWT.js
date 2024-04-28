@@ -3,9 +3,7 @@ const jwt = require('jsonwebtoken');
 function verifyJWT(req, res, next) {
   const authHeader = req.headers.authorization || req.headers.Authorization;
   if (!authHeader?.startsWith('Bearer ')) {
-    return res
-      .status(401)
-      .send({ auth: false, message: 'you are not authenticated' });
+    return res.status(401).send({ auth: false, message: 'Jūs neprijungęs' });
   }
   const token = authHeader.split(' ')[1];
   try {
@@ -14,7 +12,7 @@ function verifyJWT(req, res, next) {
     next();
   } catch (error) {
     console.log(error);
-    res.status(401).send({ auth: false, message: 'you are not authenticated' });
+    res.status(401).send({ auth: false, message: 'Jūs neprijungęs' });
   }
 }
 
