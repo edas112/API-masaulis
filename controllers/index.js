@@ -1,5 +1,6 @@
 const getInfoFooter = require('./getInfoFooter');
 const postInfoFooter = require('./postInfoFooter');
+const updateFooter = require('./updateFooter');
 
 module.exports = {
   getAllPaslaugos: require('./getAllPaslaugos'),
@@ -8,4 +9,5 @@ module.exports = {
   loginUser: require('./loginUser'),
   postInfoFooter: require('./postInfoFooter'),
   getInfoFooter: require('./getInfoFooter'),
+  updateFooter: require('./updateFooter'),
 };

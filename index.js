@@ -6,6 +6,7 @@ const paslaugaGetterRouter = require('./routes/paslaugaGetter.routes');
 const paslaugaSetterRouter = require('./routes/paslaugaSetter.routes');
 const footerSetterRouter = require('./routes/footerSetter.routes');
 const footerGetterRouter = require('./routes/footerGetter.routes');
+const userRouter = require('./routes/user.routes');
 
 const app = express();
 const port = 3000;
@@ -15,7 +16,7 @@ app.use(cors());
 
 app.use('/kortele', paslaugaGetterRouter);
 app.use('/kortele', paslaugaSetterRouter);
-app.use('/user', require('./routes/user.routes'));
+app.use('/user', userRouter);
 app.use('/footer', footerSetterRouter);
 app.use('/footer', footerGetterRouter);
 app.get('/', (req, res) => res.send('Express on Vercel'));
