@@ -1,13 +1,13 @@
 const { Types } = require('mongoose');
 const {
-  updateproductValidation,
-} = require('../validation/updateproductValidation');
+  updateFooterValidation,
+} = require('../validation/updateFooterValidation');
 const Footer = require('../models/infoFooter');
 
 async function updateFooter(id, body) {
   updateFooterValidation(id, body);
 
-  const updatedProduct = await Footer.findByIdAndUpdate(id, body, {
+  const updatedFooter = await Footer.findByIdAndUpdate(id, body, {
     new: true,
   });
 
