@@ -19,8 +19,7 @@ route returns Array of **paslaugos** <br>
 
 ```
 
-<br>
-<br>
+```
 
 # Setters
 
@@ -42,8 +41,6 @@ route create new Array of **paslaugos** <br>
 ]
 
 ```
-
-
 
 <br>
 <br>
