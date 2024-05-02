@@ -53,7 +53,7 @@ route create new Array of **paslaugos** <br>
 
 ### `GET` `/footer`
 
-route returns Array of **products** <br>
+route returns Array of **footer** <br>
 
 **Response:**<br>
 
@@ -76,7 +76,7 @@ route returns Array of **products** <br>
 
 ### `POST` `/footer`
 
-route create new Array of **products** <br>
+route create new Array of **footer** <br>
 
 **Response:**<br>
 
@@ -97,7 +97,7 @@ route create new Array of **products** <br>
 
 ### `PATCH` `/footer`
 
-route updated Array of **single products** <br>
+route updated Array of **single footer** <br>
 
 **Response:**<br>
 
