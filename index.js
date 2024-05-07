@@ -9,8 +9,10 @@ const footerGetterRouter = require('./routes/footerGetter.routes');
 const userRouter = require('./routes/user.routes');
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://192.168.1.254'],
+  origin: ['http://localhost:5173', 'http://192.168.1.254'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: 'Content-Type,Authorization',
+  credentials: true,
   optionsSuccessStatus: 200,
 };
 
