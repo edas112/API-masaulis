@@ -8,11 +8,17 @@ const footerSetterRouter = require('./routes/footerSetter.routes');
 const footerGetterRouter = require('./routes/footerGetter.routes');
 const userRouter = require('./routes/user.routes');
 
+const corsOptions = {
+  origin: ['http://localhost:3000', 'http://192.168.1.254'],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  optionsSuccessStatus: 200,
+};
+
 const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use('/kortele', paslaugaGetterRouter);
 app.use('/kortele', paslaugaSetterRouter);
