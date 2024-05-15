@@ -8,19 +8,19 @@ const footerSetterRouter = require('./routes/footerSetter.routes');
 const footerGetterRouter = require('./routes/footerGetter.routes');
 const userRouter = require('./routes/user.routes');
 
-// const corsOptions = {
-//   origin: ['http://localhost:5173', 'http://192.168.1.124'],
-//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-//   // allowedHeaders: 'Content-Type,Authorization',
-//   credentials: true,
-//   optionsSuccessStatus: 200,
-// };
+const corsOptions = {
+  origin: ['http://localhost:5173', 'https://masaulis.netlify.app'],
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  // allowedHeaders: 'Content-Type,Authorization',
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use('/kortele', paslaugaGetterRouter);
 app.use('/kortele', paslaugaSetterRouter);
