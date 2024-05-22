@@ -7,6 +7,7 @@ const paslaugaSetterRouter = require('./routes/paslaugaSetter.routes');
 const footerSetterRouter = require('./routes/footerSetter.routes');
 const footerGetterRouter = require('./routes/footerGetter.routes');
 const userRouter = require('./routes/user.routes');
+const verifyJWT = require('./middleware/verifyJWT');
 
 const corsOptions = {
   origin: ['http://localhost:5173', 'https://masaulis.netlify.app'],
@@ -20,11 +21,11 @@ const port = 3000;
 app.use(express.json());
 app.use(cors(corsOptions));
 
-app.use('/kortele', paslaugaGetterRouter);
-app.use('/kortele', paslaugaSetterRouter);
+app.use('/kortele', verifyJWT, paslaugaGetterRouter);
+app.use('/kortele', verifyJWT, paslaugaSetterRouter);
 app.use('/user', userRouter);
-app.use('/footer', footerSetterRouter);
-app.use('/footer', footerGetterRouter);
+app.use('/footer', verifyJWT, footerSetterRouter);
+app.use('/footer', verifyJWT, footerGetterRouter);
 app.get('/', (req, res) => res.send('Express on Vercel'));
 
 const connectDB = async () => {
