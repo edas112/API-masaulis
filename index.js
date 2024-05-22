@@ -21,11 +21,11 @@ const port = 3000;
 app.use(express.json());
 app.use(cors(corsOptions));
 
-app.use('/kortele', verifyJWT, paslaugaGetterRouter);
-app.use('/kortele', verifyJWT, paslaugaSetterRouter);
+app.use('/kortele', paslaugaGetterRouter);
+app.use('/kortele', paslaugaSetterRouter);
 app.use('/user', userRouter);
-app.use('/footer', verifyJWT, footerSetterRouter);
-app.use('/footer', verifyJWT, footerGetterRouter);
+app.use('/footer', footerSetterRouter);
+app.use('/footer', footerGetterRouter);
 app.get('/', (req, res) => res.send('Express on Vercel'));
 
 const connectDB = async () => {
