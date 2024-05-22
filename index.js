@@ -7,7 +7,7 @@ const paslaugaSetterRouter = require('./routes/paslaugaSetter.routes');
 const footerSetterRouter = require('./routes/footerSetter.routes');
 const footerGetterRouter = require('./routes/footerGetter.routes');
 const userRouter = require('./routes/user.routes');
-const verifyJWT = require('./middleware/verifyJWT');
+// const verifyJWT = require('./middleware/verifyJWT');
 
 const corsOptions = {
   origin: ['http://localhost:5173', 'https://masaulis.netlify.app'],
